@@ -1,69 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FalconDex | Global MemeCoin Exchange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Falcon | Velvet Sovereign</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme">
+<body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/3757/3757833.png" alt="Falcon" class="falcon-logo">
-            <span>FALCON<span class="highlight">DEX</span></span>
+    <div class="falcon-illustration">
+        <img src="https://raw.githubusercontent.com/Aras-7/Assets/main/falcon-lineart.png" alt="Falcon Art">
+    </div>
+
+    <div class="velvet-card">
+        <div class="brand-header">
+            <span class="dot"></span>
+            <h1>FALCON</h1>
         </div>
-        <div class="nav-actions">
-            <button class="lang-btn" onclick="toggleLanguage()">
-                <i class="fa-solid fa-globe"></i> <span id="lang-text">العربية</span>
-            </button>
-            <button class="wallet-btn" id="connectWallet">
-                <i class="fa-solid fa-wallet"></i> <span data-en="Connect Wallet" data-ar="ربط المحفظة">Connect Wallet</span>
-            </button>
+
+        <div class="soft-input">
+            <label>PAYMENT AMOUNT</label>
+            <div class="row">
+                <input type="number" placeholder="0.00" id="pay">
+                <div class="token-pill">ETH</div>
+            </div>
         </div>
-    </nav>
 
-    <main class="swap-container">
-        <div class="swap-card">
-            <div class="swap-header">
-                <h2 data-en="Swap" data-ar="تبديل">Swap</h2>
-                <i class="fa-solid fa-gear"></i>
-            </div>
-
-            <div class="input-box">
-                <div class="box-header">
-                    <span data-en="You Pay" data-ar="تدفع">You Pay</span>
-                </div>
-                <div class="box-body">
-                    <input type="number" placeholder="0.0" id="pay-amount">
-                    <button class="token-select">
-                        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" width="20"> ETH <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="swap-divider">
-                <div class="arrow-bg"><i class="fa-solid fa-arrow-down"></i></div>
-            </div>
-
-            <div class="input-box">
-                <div class="box-header">
-                    <span data-en="You Receive" data-ar="تستلم">You Receive</span>
-                </div>
-                <div class="box-body">
-                    <input type="number" placeholder="0.0" id="receive-amount" readonly>
-                    <button class="token-select highlight">
-                        <span data-en="Select Token" data-ar="اختر عملة">Select Token</span> <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-
-            <button class="main-swap-btn" id="swap-btn" data-en="Enter an amount" data-ar="أدخل المبلغ">Enter an amount</button>
+        <div class="node-divider">
+            <div class="node-line"></div>
+            <div class="node-center">✧</div>
+            <div class="node-line"></div>
         </div>
-    </main>
 
-    <script type="module" src="script.js"></script>
+        <div class="soft-input active">
+            <label>ESTIMATED RECEIVE</label>
+            <div class="row">
+                <input type="number" placeholder="0.00" id="receive" readonly>
+                <div class="token-pill gold">FLCN</div>
+            </div>
+        </div>
+
+        <button class="btn-velvet" id="swap-btn">
+            <span class="btn-text">CONFIRM SWAP</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
